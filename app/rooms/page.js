@@ -48,18 +48,18 @@ export default function Rooms() {
 
     return (
         <div className="w-screen min-h-screen bg-gray-100 text-gray-900 pt-20">
-            <div className="container mx-auto py-10">
+            <div className="container mx-auto py-10 px-4 sm:px-6 lg:px-16">
                 <h2 className="text-3xl font-semibold text-center mb-6 font-playfairDisplay">Our Rooms</h2>
-                <div className="space-y-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
                     {rooms.map((room, index) => (
-                        <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
-                            <h3 className="text-2xl font-bold mb-4 font-playfairDisplay">{room.name}</h3>
-                            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
+                        <div key={index} className="bg-white p-6 rounded-lg shadow-lg flex flex-col">
+                            <h3 className="text-2xl font-bold mb-4 font-playfairDisplay text-center">{room.name}</h3>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                                 {room.images.map((img, i) => (
-                                    <img key={i} src={img} className="rounded-lg shadow-lg" alt={`${room.name} image ${i + 1}`} />
+                                    <img key={i} src={img} className="rounded-lg shadow-lg w-full object-cover" alt={`${room.name} image ${i + 1}`} />
                                 ))}
                             </div>
-                            <div className="text-gray-700">
+                            <div className="text-gray-700 space-y-2">
                                 <p><strong>Guests:</strong> {room.details.guests}</p>
                                 <p><strong>Amenities:</strong> {room.details.amenities}</p>
                                 <p><strong>Size:</strong> {room.details.size}</p>
