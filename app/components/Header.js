@@ -59,13 +59,13 @@ export default function Header() {
         </ul>
 
         {/* Mobile Menu Button */}
-        <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden text-2xl">
+        <button onClick={() => setMenuOpen(!menuOpen)} className="absolute top-5 right-6 md:hidden text-3xl">
           {menuOpen ? <FiX className="text-white" /> : <FiMenu className={textColor} />}
         </button>
 
         {/* Mobile Menu */}
         {menuOpen && (
-          <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 flex flex-col items-center justify-center space-y-6 text-white text-lg md:hidden">
+          <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 flex flex-col items-center justify-center space-y-6 text-white text-2xl md:hidden font-playfairDisplay">
             <button onClick={() => setMenuOpen(false)} className="absolute top-6 right-6 text-3xl">
               <FiX />
             </button>
