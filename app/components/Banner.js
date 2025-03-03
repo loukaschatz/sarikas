@@ -62,7 +62,7 @@ export default function Banner() {
             ))}
 
             {/* Title */}
-            <div className="absolute top-60 md:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl sm:text-4xl md:text-5xl font-bold shadow-md bg-black bg-opacity-50 w-3/4 lg:w-full lg:px-6 py-2 rounded-lg font-playfairDisplay text-center">
+            <div className="absolute top-60 md:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl sm:text-4xl md:text-5xl font-bold shadow-md bg-black bg-opacity-50 w-3/4 lg:w-auto lg:px-6 py-2 rounded-lg font-playfairDisplay text-center">
                 Welcome to Your Dream Stay
             </div>
 
