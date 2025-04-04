@@ -41,11 +41,6 @@ export default function ReserveRoomContent() {
                     if (!docSnap.exists() || !docSnap.data().reserved) {
                         isAvailable = true;
                     }
-
-                    // priceList.push({
-                    //     date: currentDate.toDateString(),
-                    //     price: Number(docSnap.data().price)
-                    // });
                     
                     const price = Number(docSnap.data().price);
                     if (typeof price === "number" && !isNaN(price)) {
